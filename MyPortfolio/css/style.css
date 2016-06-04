@@ -1,0 +1,209 @@
+
+@keyframes animation1{
+	0%{
+		color:#eeeeee;
+	}
+	20%{
+		color:#bdbdbd;
+	}
+	40%{
+		color:#757575;
+	}
+	60%{
+		color:#424242;
+	}
+	80%{
+		color:#212121;
+	}
+	100%{
+		color:#000000;
+	}
+}
+
+html{
+	-webkit-font-smoothing:antialiased;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+	background-color:#eeeeee;
+}
+.rightMenu{
+    float: right;
+}
+.top-navigation{
+	background-color: #fff;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: 3.1rem;
+	
+}
+.navigationMenu{
+	font-family:'Abril Fatface',Georgia,sans-serif;
+	font-size:20px;
+	
+	font-weight: 600;
+}
+.navigationBar{
+	width:1170px;
+}
+.navbar-header{
+	margin-left: 15%;
+}
+.top-navigation .navigation-items a{
+	color:#000;
+}
+.top-navigation > .navigation-content{
+	width:970px;
+	height:50px;
+	margin:0 auto;
+}
+.top-navigation .navigation-items li{
+	display:inline-block;
+	list-style-type:none;
+	padding-right:20px;
+	float:left;
+}
+.top-navigation .navigation-items{
+	float:right;
+}
+.top-navigation .navigation-content .navigation-items .display-name a{
+	padding-right:19rem;
+}
+ul.navigation-items {
+    margin-top: 15px;
+}
+.navigation-items a:link{
+	text-decoration:none;
+}
+.introduction{
+	background-image:url('../background.jpg');
+	background-position: center bottom;
+	background-repeat:no-repeat;
+	background-size: cover;
+	overflow:hidden;
+	height: 46.5rem;
+}
+.introduction div{
+
+}
+.content{
+	text-align:center;
+	padding: 14.5rem;
+	font-family:'Yeseva One',Georgia,sans-serif;
+	font-size: 21px;
+}
+.projects-section .projects .list li{
+	list-style-type: none;
+	display:inline-block;
+	padding-left:15px;
+}
+.projects-section .projects ul{
+	margin-top:35px;
+	margin-left: 25px;
+}
+.projects-section{
+	text-align: center;
+	font-family:'Abril Fatface',Georgia,sans-serif;
+}
+.projects-section > .projects{
+	width:100%;
+	background-color:#eeeeee;
+}
+.projects-section .projects > h1{
+	letter-spacing:1.5px;
+	font-size:2.5em;
+}
+.projects-section .projects a:link,a:visited{
+	color:#000;
+	text-decoration: none;
+}
+.projects-section .projects a:hover{
+	color:#616161;
+}
+.projects-section .projects .text{
+	letter-spacing:1px;
+	font-weight: lighter;
+}
+.projects-section .projects > p {
+    font-size: 20px;
+    margin-top: 40px;
+    font-style: italic;
+<<<<<<< HEAD
+    animation: animation1 3s linear 0s infinite;
+}
+.blogpost{
+	
+    animation: animation1 3s linear 0s infinite;
+}
+.blogpost{
+	height: 245px;
+	background-color:#e0e0e0;
+}
+.blogpost >.blogpost-content{
+	text-align:center;
+	padding: 4.5rem;
+	font-family:'Abril Fatface',Georgia,sans-serif;
+	font-size: 21px;
+}
+.blogpost .blogpost-content > h1{
+	margin :0 auto;
+}
+.blogpost .blogpost-content > p{
+	font-style:italic;
+	animation: animation1 5s linear 0s infinite;
+}
+.social > .social-content{
+	text-align: center;
+}
+.social .social-content h1{
+	font-size:2.5em;
+	letter-spacing: 1.5px;
+}
+.social .icons{
+	display:block;
+	list-style-type: none;
+}
+.social .icons >li{
+	border-radius: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    margin: 1.25rem 5px;
+    border: 1px solid #bbdefb;
+    padding: 0.625rem 0;
+    text-align: center;
+}
+.social .twitter a:link,a:hover,a:visited{
+	color:#55acee;
+}
+.social .facebook a:link,a:hover,a:visited{
+	color:#4c66a4;
+}
+.social .instagram a:link,a:hover,a:visited{
+	color:#3f729b;
+}
+
+.social .social-content > p{
+	margin-left: 2.25rem;
+	font-size: 1.3em;
+}
+.social .social-content .details li{
+	list-style-type: none;
+	font-size: 1.3em;
+}
+.social{
+	background-color:#eeeeee;
+	text-align: center;
+	font-family:'Abril Fatface',Georgia,sans-serif;
+
+}
+.social .social-content .details a:link,a:hover,a:visited{
+	text-decoration: none;
+	color:#616161;
+}
+@media only screen and (max-width: 500px) { .top-navigation .navigation-content li { font-size: 1em; } }
