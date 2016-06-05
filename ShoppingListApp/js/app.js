@@ -1,21 +1,6 @@
 $(document).ready(function(){
 
-/*	$( ".text-box" )
-  .keyup(function() {
-    var value = $( this ).val();
-    $( "li" ).text( value );
-  })
-  .keyup();
-
-document.getElementById("add").onclick=function(){
-	var text=document.getElementById("list-item").value;
-	var li="<li>" + text + "</li>";
-	document.getElementById("list").appendChild(li);
-}
-*/
-
 // Add Items To The List
-
 
 $('#item').on("keyup",function(event){
 	if(event.keyCode == 13){
@@ -39,21 +24,20 @@ if(!$.trim($('#item').val())) {
 
 // Checking Items off the list
 
-/* $('#list-items').on("click",function(){
-	if ($('input:checked')){
-		$('#list-items').html('<strike><li class="list-items"></li></strike>')
-	}
-})
-*/
-
 $('.list').on('click','li',function(){
 	$(this).toggleClass('strike');
 	$(this).children('.box').toggleClass('checked');
 });
+
+// Deleting Items from the list
+
 $('.list').on('click','#delete',function(e){
 	e.preventDefault();
 	$(this).parent().remove();
 });
+
+// Remaking the list
+
 $(document).on('click','.remake',function(){
 	$('.list').empty();
 });
