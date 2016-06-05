@@ -1,0 +1,86 @@
+@keyframes animation1{
+	0%{
+		background-image:url('../Images/Summer.jpg');
+	}
+	50%{
+		background-image: url('../Images/Winter.jpg');
+	}
+	100%{
+		background-image: url('../Images/Spring.jpg');
+	}
+}
+
+body{
+	background-image: url('../Images/Universe.jpg');
+	background-repeat: no-repeat;
+	background-size:100%;
+	text-align: center;
+	color:#bdbdbd;
+	font-family: "Love Ya Like A Sister",georgia,sans-serif;
+	text-shadow:2px 2px 8px #000 ;
+}
+.quizname{
+	font-size: 5rem;
+	font-family:"Love Ya Like A Sister",Georgia,sans-serif;
+	letter-spacing:0.1em;
+}
+.results{
+	display: none;
+	font-size: 2.3rem;
+	font-weight: bold;
+}
+
+#submit,#next{
+	font-size: 1.7rem;
+	background-color: #fff;
+	font-family: 'Love Ya Like A Sister',georgia,sans-serif;
+	color: #000;
+	border: 2.5px solid #eceff1;
+	border-radius: 1rem;
+}
+
+.finalResult{
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+button{
+	background-color:#7e57c2;
+	border: 2.5px solid #7e57c2;
+	border-radius: 0.5em;
+	font-size:2.5rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	margin-top:11%;
+	max-width:1200px;
+	color:#bdbdbd;
+	font-family: "Love Ya Like A Sister",georgia,sans-serif;
+}
+#next_button_holder{
+	display:none;	
+}
+
+#restart{
+	margin-top:4%;
+	display:none;
+}
+
+.firstQue,.secondQue,.thirdQue,.fourthQue,.fifthQue{
+	display:none;
+}
+
+#q1,#q2,#q3,#q4,#q5{
+	display: none;
+}
+.feedback_holder{
+	display: none;
+}
+#button_holder{
+	display:none;
+}
+
+form{
+	font-size:2.3rem;
+	letter-spacing:0.1em;
+	font-weight: bold;
+}
