@@ -1,0 +1,2 @@
+﻿Order Number,Order Date, Customer Name, State, Tax Rate, Product Type, Area, Cost Per Square Foot, Labor Per Square Foot, Total Material Cost, Total Labor Cost, Total Cost, Status
+1,5/18/2016 12:00:00 AM,"URVASHI,ATODARIA",OH,6.25,CARPET,500,2.25,2.10,1125.00,1050.00,135.9375,2310.9375,Active

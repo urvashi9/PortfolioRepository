@@ -1,0 +1,7 @@
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\bin\Debug\SGFlooring.Data.dll
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\bin\Debug\SGFlooring.Data.pdb
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\bin\Debug\SGFlooring.Models.dll
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\bin\Debug\SGFlooring.Models.pdb
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\obj\Debug\SGFlooring.Data.csprojResolveAssemblyReference.cache
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\obj\Debug\SGFlooring.Data.dll
+C:\_repos\urvashi-atodaria-individual-work\MasteryProject\SGFlooring.Data\obj\Debug\SGFlooring.Data.pdb

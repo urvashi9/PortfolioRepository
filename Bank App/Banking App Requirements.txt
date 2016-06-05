@@ -1,0 +1,11 @@
+Project Requirements:
+Create Account
+Delete Account
+Withdraw from account
+Transfer money from one account to another
+
+Verifications:
+Can't Withdraw more than account balance
+can't transfer more than account balance
+Can't delete account with a balance other than zero(withdraw money first)
+Can't create an account with less than a $100 deposit
