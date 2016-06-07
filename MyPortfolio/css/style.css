@@ -133,7 +133,6 @@ ul.navigation-items {
     font-size: 20px;
     margin-top: 40px;
     font-style: italic;
-<<<<<<< HEAD
     animation: animation1 3s linear 0s infinite;
 }
 .blogpost{
@@ -197,7 +196,7 @@ ul.navigation-items {
 	font-size: 1.3em;
 }
 .social{
-	background-color:#eeeeee;
+	background-color:#e0e0e0;
 	text-align: center;
 	font-family:'Abril Fatface',Georgia,sans-serif;
 
