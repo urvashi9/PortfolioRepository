@@ -1,0 +1,229 @@
+﻿@model HRWebApp.Models.Application
+
+@{
+    ViewBag.Title = "AddApplication";
+}
+
+<div class="row">
+    <div class="col-xs-12">       
+        <h3>Please Fill Out The Following Application:</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-9">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(j => j.JobApplyingFor.JobId)
+            <div id="personalDetails" class="form-horizontal">
+                <div class="form-group">                
+                        <h4>@Html.LabelFor(m => m.Name, new { @class = "control-label col-md-4", id = "appName" })</h4>                             
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+                        <p>@Html.ValidationMessageFor(m => m.Name)</p>
+                    </div>
+
+                </div>
+                <h4 class="headerNames">
+                    Address
+                </h4>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.Street1, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Address.Street1, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.Street2, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Address.Street2, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.City, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Address.City, new {@class = "form-control"})
+                        <p>@Html.ValidationMessageFor(m => m.Address)</p>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.State, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Address.State, new {@class = "form-control"})
+                        <p>@Html.ValidationMessageFor(m => m.Address)</p>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.Zipcode, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Address.Zipcode, new {@class = "form-control"})
+                    </div>
+                </div>
+                <h4 class="headerNames">
+                    Contact Information
+                </h4>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.PhoneNumber, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.PhoneNumber)
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.EmailId, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.EmailId, new {@class = "form-control"})
+                        <p>@Html.ValidationMessageFor(m => m.EmailId)</p>
+                    </div>
+                                      
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Dob, new {@class = "control-label col-md-4"})
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Dob, new {@class = "form-control", id = "datepicker"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4>@Html.LabelFor(m => m.JobApplyingFor.JobTitle, new {@class = "control-label col-md-4 headerNames"})</h4>
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.JobApplyingFor.JobTitle, new {@class = "form-control", @readonly = "readonly"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4>
+                        @Html.LabelFor(m => m.SkillSet, new {@class = "control-label col-md-4 headerNames"})
+                    </h4>
+                    <div class="col-md-7">
+                        @Html.TextAreaFor(m => m.SkillSet, new {@class = "form-control", rows = 5})
+                        <p>@Html.ValidationMessageFor(m => m.SkillSet)</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            // Adding work experience details
+            <h4 class="headerNames">Work History</h4>
+            <div class="form-horizontal" id="workHistory">
+                <div class="wrkHistoryItem">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Job Title</label>
+                        <div class="col-md-8">
+                            <input type="text" name="WorkHistory[0].JobTitle" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Company Name</label>
+                        <div class="col-md-8">
+                            <input type="text" name="WorkHistory[0].CompanyName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Years Worked At The Said Company</label>
+                        <div class="col-md-8">
+                            <input type="text" name="WorkHistory[0].Years" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-info" type="submit" id="btnAddWork">Add More Work History</button>
+
+            // Adding educational details
+            <h4 class="headerNames">Educational Details</h4>
+            <div id="eductionalBackground" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">Degree</label>
+                    <div class="col-md-8">
+                        <input type="text" name="Education[0].Degree" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Graduation Year</label>
+                    <div class="col-md-8">
+                        <input type="text" name="Education[0].GraduationYear" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Major</label>
+                    <div class="col-md-8">
+                        <input type="text" name="Education[0].Major" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">School Name</label>
+                    <div class="col-md-8">
+                        <input type="text" name="Education[0].School" class="form-control"/>
+                    </div>
+
+                </div>
+            </div>
+            <button class="btn btn-info" type="submit" id="btnAddEdu">Add More Educational Information</button>
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <h4>
+                        @Html.LabelFor(m => m.BriefDescription, new {@class = "control-label col-md-4 headerNames"})
+                    </h4>
+                    <div class="col-md-7">
+                        @Html.TextAreaFor(m => m.BriefDescription, new {@class = "form-control", rows = 5})
+                        <p>@Html.ValidationMessageFor(m => m.BriefDescription)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <input type="submit" class="btn btn-success" value="Send My Resume" id="sendResume"/>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        var index = 1;
+
+        $(document)
+            .ready(function() {
+                $("#btnAddWork")
+                    .click(function (e) {
+                        e.preventDefault();
+                        var count = $(".wrkHistoryItem").length;
+                        var data = '<div class="wrkHistoryItem"><div class="form-group"><label class="control-label col-md-4">Job Title</label><div class="col-md-8"><input type="text" name="WorkHistory[' +
+                            count +
+                            '].JobTitle" class="form-control" /></div></div><div class="form-group"><label class = "control-label col-md-4">Company Name</label><div class = "col-md-8"><input type="text" name="WorkHistory[' +
+                            count +
+                            '].CompanyName" class="form-control" /></div></div><div class="form-group"><label class = "control-label col-md-4">Years Worked At The Said Company</label><div class = "col-md-8"><input type="text" name="WorkHistory[' +
+                            count +
+                            '].Years" class="form-control" /></div></div></div>';
+                        $('#workHistory').append(data);
+                        
+                    });
+                $("#btnAddEdu")
+                    .click(function (e) {
+                        e.preventDefault();
+                        var data = '<div class="form-group"><label class="control-label col-md-4">Degree</label><div class="col-md-8"><input type="text" name="Education[' +
+                            index +
+                            '].Degree" class="form-control" /></div></div><div class="form-group"><label class = "control-label col-md-4">Graduation Year</label><div class = "col-md-8"><input type="text" name="Education[' +
+                            index +
+                            '].GraduationYear" class="form-control" /></div></div><div class="form-group"><label class = "control-label col-md-4">Major</label><div class= "col-md-8"><input type="text" name="Education[' +
+                            index +
+                            '].Major" class="form-control" /></div></div><div class="form-group"><label class = "control-label col-md-4">School Name</label><div class= "col-md-8"><input type="text" name="Education[' +
+                            index +
+                            '].School" class="form-control" /></div></div>';
+                        $('#eductionalBackground').append(data);
+                        index++;
+                    });
+                $('#datepicker')
+                    .datepicker({
+                        
+                        changeYear: true,
+                        changeMonth: true,
+                        yearRange: "1950:+nn",
+                        defaultDate: 'MM/DD/YYYY'
+
+                    }).attr('placeholder');                
+            });
+    </script>
+}
+

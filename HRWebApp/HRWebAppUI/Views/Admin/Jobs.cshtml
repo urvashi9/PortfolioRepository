@@ -1,0 +1,51 @@
+﻿@model List<HRWebApp.Models.Job>
+
+@{
+    ViewBag.Title = "Jobs";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Jobs:</h3>
+    </div>
+</div>
+<div class="row">
+    <div class ="col-xs-12">
+        <table class="table">
+            @foreach (var job in Model)
+            {
+                <tr>
+                    <td>
+                        <ul class="jobList">
+                            <li>
+                                <p>
+                                    <b>Job Title : @job.JobTitle</b>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Job Description</b>
+                                </p>
+                                @job.JobDescription
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Job Requirements</b>
+                                </p>
+                                @job.JobRequirement
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditJob", "Admin", new {id = job.JobId} , new {@class = "btn btn-info", id = "editButton"})
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "DeleteJob", "Admin", new {id = job.JobId}, new {@class = "btn btn-info", id = "deleteButton"})
+                    </td>
+                </tr>
+            }
+        </table>
+        @Html.ActionLink("Add Job","AddJob","Admin",null,new {@class = "btn btn-success", id = "addButton"})
+    </div>
+</div>
+

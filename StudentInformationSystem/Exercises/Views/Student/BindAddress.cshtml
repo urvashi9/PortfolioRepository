@@ -1,0 +1,49 @@
+﻿@model Exercises.Models.Data.Student
+
+@{
+    ViewBag.Title = "BindAddress";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-3">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-9">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(s => s.StudentId)
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Address Details</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Street 1</label>
+                            @Html.TextBoxFor(s => s.Address.Street1, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Street 2(Optional)</label>
+                            @Html.TextBoxFor(s => s.Address.Street2, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            @Html.TextBoxFor(s => s.Address.City, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            @Html.TextBoxFor(s => s.Address.State.StateName, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Zip Code</label>
+                            @Html.TextBoxFor(s => s.Address.PostalCode, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

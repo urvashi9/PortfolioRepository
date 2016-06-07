@@ -1,0 +1,28 @@
+﻿@model Exercises.Models.Data.State
+
+@{
+    ViewBag.Title = "EditState";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Edit State</h3>
+        @Html.ActionLink("Return To List", "States", "Admin")
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(s => s.StateId)
+            <div class="form-group">
+                <label>State Name</label>
+                @Html.TextBoxFor(s => s.StateName, new {@class = "form-control", placeholder = "eg. Michigan"})
+                <label>State Abbreviation</label>
+                @Html.TextBoxFor(s => s.StateAbbreviation, new {@class = "form-control", placeholder = "eg. MI"})
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+        }
+    </div>
+</div>
+

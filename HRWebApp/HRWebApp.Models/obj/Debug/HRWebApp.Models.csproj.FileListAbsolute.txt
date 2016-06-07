@@ -1,0 +1,5 @@
+C:\_repos\urvashi-atodaria-individual-work\HRWebApp\HRWebApp.Models\bin\Debug\HRWebApp.Models.dll
+C:\_repos\urvashi-atodaria-individual-work\HRWebApp\HRWebApp.Models\bin\Debug\HRWebApp.Models.pdb
+C:\_repos\urvashi-atodaria-individual-work\HRWebApp\HRWebApp.Models\obj\Debug\HRWebApp.Models.csprojResolveAssemblyReference.cache
+C:\_repos\urvashi-atodaria-individual-work\HRWebApp\HRWebApp.Models\obj\Debug\HRWebApp.Models.dll
+C:\_repos\urvashi-atodaria-individual-work\HRWebApp\HRWebApp.Models\obj\Debug\HRWebApp.Models.pdb

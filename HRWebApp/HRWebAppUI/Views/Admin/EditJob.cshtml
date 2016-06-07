@@ -1,0 +1,48 @@
+﻿@model HRWebApp.Models.Job
+
+@{
+    ViewBag.Title = "EditJob";
+}
+
+<div style="width: 70%">
+    @using (Html.BeginForm())
+    {
+
+
+        <div class="form-horizontal">
+            <h4>Edit Job</h4>
+            @Html.ActionLink("Back to List", "Jobs", "Admin")
+            <hr />
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobTitle, new { @class = "control-label col-md-2" })
+                <div class="col-lg-10">
+                    @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobDescription, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.JobDescription, new { @class = "form-control", rows = 7 })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobRequirement, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.JobRequirement, new { @class = "form-control", rows = 7 })
+                </div>
+            </div>
+
+            @Html.HiddenFor(model => model.JobId)
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

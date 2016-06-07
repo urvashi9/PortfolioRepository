@@ -1,0 +1,34 @@
+﻿@model HRWebApp.Models.Job
+
+@{
+    ViewBag.Title = "AddJob";
+}
+
+<h2>AddJob</h2>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Add A Job</h4>
+        @Html.ActionLink("Return To List", "Jobs", "Admin")
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.JobTitle)
+                @Html.TextBoxFor(m => m.JobTitle, new {@class = "form-control", placeholder = "Job Title"})
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.JobDescription)
+                @Html.TextAreaFor(m => m.JobDescription, new {@class = "form-control", placeholder = "Job Title"})
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.JobRequirement)
+                @Html.TextAreaFor(m => m.JobRequirement, new { @class = "form-control", placeholder = "Job Title" })
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+        }
+    </div>
+</div>

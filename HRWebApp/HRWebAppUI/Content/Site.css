@@ -1,0 +1,159 @@
+﻿@media screen and (max-width:400px) {
+    #learnMore {
+        display: none;
+    }
+    .mastHead {
+        height: 200px;
+    }
+    .icons > li {
+        display: flex;
+    }
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #B31B27;
+    letter-spacing: 0.4px;
+    font-size: 1.7rem;
+    color: #aaaaaa;
+    /*font-size: 170%;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.description {
+    color: #eeeeee;
+    background-color: #555555;
+    margin-left: 0;
+    margin-right: 0;
+    /*font-family: "Roboto",sans-serif;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.rightIcons {
+    padding-left: 550px;
+}
+.jobList > li > p {
+    margin: 0;
+}
+.jobList > li {
+    padding: 1%;
+    list-style-type: none;
+    width: 85%;
+}
+
+#applyButton {
+    margin-top: 100%;
+}
+
+#btnAddEdu,#btnAddWork,#sendResume {
+    margin-left: 34.5%;
+}
+
+h4 > #appName {
+    
+    width: 33.5%;
+}
+
+h4.headerNames {
+    margin-left: 16.2%;
+}
+
+.form-group > h4 > .headerNames {
+    padding-right: 8.5%;
+}
+
+#editButton {
+    margin-top: 150%;
+}
+
+#deleteButton {
+    margin-top: 112%;
+}
+
+#addButton {
+    margin-left: 5%;
+}
+
+.mastHead {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Background-01010101.svg/2000px-Background-01010101.svg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    display: flex;
+    
+}
+
+#leftImage{
+    margin-top: 14%;   
+}
+
+#rightText > h1 {
+    font-family: "Dosis";
+    padding-left: 0;
+    
+    display: -webkit-box;
+    margin-top: 20%;
+}
+
+#redText {
+    color: #B31B27;
+}
+
+#greyText {
+    color: #464646;
+}
+
+.icons {
+    margin-left: 14%;
+}
+
+.icons > li {
+    display: inline-flex;
+    list-style-type: none;
+    width: 27%;
+}
+
+.listElement {
+    padding-left: 0.3em;
+    padding-right: 2%;
+}
+
+.socialIcons > li{
+    border-radius: 6.25rem;
+    display: inline-flex;
+    list-style-type: none;
+    margin: 1.25rem 5px;
+    border: 1px solid #eaebec;
+    padding: 1.4rem 1.5rem;
+    width: 4.5rem;
+    height: 4.5rem;   
+}
+
+
+
+
+@media screen and (min-width: 1100px) {
+    #rightText > h1 {
+        font-size: 16rem;
+    }
+}

@@ -1,0 +1,51 @@
+﻿@model List<HRWebApp.Models.Application>
+
+@{
+    ViewBag.Title = "Applications";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>All Applications: </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Application ID</th>
+                <th>Applicant Name</th>
+                <th>State</th>
+                <th>Skill Set</th>
+                <th>Job</th>
+                <th></th>
+            </tr>
+            </thead>
+            @foreach (var application in Model)
+            {
+                <tr>
+                    <td>
+                        @application.ApplicationId
+                    </td>
+                    <td>
+                        @application.Name
+                    </td>
+                    <td>
+                        @application.Address.State
+                    </td>
+                    <td>
+                        @application.SkillSet
+                    </td>
+                    <td>
+                        @application.JobApplyingFor.JobTitle
+                    </td>
+                    <td>
+                        @Html.ActionLink("See Full Application","SingleApplication","Admin", new {id = application.ApplicationId}, new {@class="btn btn-info"})
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,85 @@
+﻿@using HRWebApp.Models
+@model HRWebApp.Models.Application
+
+@{
+    ViewBag.Title = "SingleApplication";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Application ID : @Model.ApplicationId</h3>
+        <h3>Job Applied For : @Model.JobApplyingFor.JobTitle</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Applicant Name</td>
+                    <td>:</td>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(m => m.Address) </td>
+                    <td>:</td>
+                    <td>@Model.Address.Street1<br />@Model.Address.City<br />@Model.Address.State - @Model.Address.Zipcode</td>
+                </tr>
+                <tr>
+                    <td>Contact Information</td>
+                    <td>:</td>
+                    <td>@Model.PhoneNumber<br />@Model.EmailId</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(m => m.Dob)</td>
+                    <td>:</td>
+                    <td>@Model.Dob</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(m => m.SkillSet)</td>
+                    <td>:</td>
+                    <td>@Model.SkillSet</td>
+                </tr>
+                <tr>
+                    <td>Work History</td>
+                    <td>:</td>
+                    <td>
+                        <ul style="padding-left: 0">
+                            @foreach (var item in Model.WorkHistory)
+                            {
+
+                                <li>
+                                    <p>Job Title : @item.JobTitle</p>
+                                    <p>Company Name : @item.CompanyName</p>
+                                    <p>Years Worked Here : @item.Years</p>
+                                </li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Educational Background</td>
+                    <td>:</td>
+                    <td>
+                        <ul style="padding-left: 0">
+                            @foreach (var item in Model.Education)
+                            {
+                                <li>
+                                    <p>Degree : @item.Degree</p>
+                                    <p>Graduation Year : @item.GraduationYear</p>
+                                    <p>Major : @item.Major</p>
+                                    <p>School : @item.School</p>
+                                </li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Brief Description</td>
+                    <td>:</td>
+                    <td>@Model.BriefDescription</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

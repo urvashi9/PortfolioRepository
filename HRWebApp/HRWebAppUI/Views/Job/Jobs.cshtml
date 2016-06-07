@@ -1,0 +1,46 @@
+﻿@using System.Web.Mvc.Html
+@model List<HRWebApp.Models.Job>
+
+@{
+    ViewBag.Title = "Jobs";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Current Job Openings:</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-9">
+        <table class="table">
+            @foreach (var job in Model)
+            {
+                
+                                
+                <tr>
+                    <td>
+                        <ul class="jobList">
+                            <li>
+                                <p><b>Job Title : @job.JobTitle</b>
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>Job Description</b>
+                                </p>
+                                @job.JobDescription
+                            </li>
+                            <li>
+                                <p><b>Job Requirements</b>
+                                </p>
+                                @job.JobRequirement
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Apply Now", "AddApplication", "Job", new {id = job.JobId}, new {@class = "btn btn-info", id = "applyButton"})
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
