@@ -1,0 +1,14 @@
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\bin\Debug\UnitConverter.dll.config
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\bin\Debug\UnitConverter.dll
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\bin\Debug\UnitConverter.pdb
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\bin\Debug\Utilities.dll
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\bin\Debug\Utilities.pdb
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\obj\Debug\UnitConverter.csprojResolveAssemblyReference.cache
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\obj\Debug\UnitConverter.dll
+C:\_repos\urvashi-atodaria-individual-work\ChallengeLabStringAndText\UnitConverter\obj\Debug\UnitConverter.pdb
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\bin\Debug\UnitConverter.dll.config
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\bin\Debug\UnitConverter.dll
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\bin\Debug\UnitConverter.pdb
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\obj\Debug\UnitConverter.csprojResolveAssemblyReference.cache
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\obj\Debug\UnitConverter.dll
+C:\_repos\urvashi-atodaria-individual-work\UnitConverter\UnitConverter\obj\Debug\UnitConverter.pdb
